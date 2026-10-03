@@ -1,0 +1,6 @@
+google-genai
+python-docx
+openpyxl
+streamlit
+numpy
+python-dotenv
