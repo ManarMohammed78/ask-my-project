@@ -2,7 +2,7 @@
 
 A small RAG (Retrieval-Augmented Generation) chatbot that answers questions about my Apple Inc. financial valuation project (FY2023-FY2025). It reads my Excel model and Word report, finds the most relevant parts for each question, and asks Gemini to answer using only those parts.
 
-Live demo: PASTE_YOUR_STREAMLIT_LINK_HERE
+Live demo: [(https://ask-my-project-m4g2jnkv5vbhesf8kshgj9.streamlit.app/)](https://ask-my-project-m4g2jnkv5vbhesf8kshgj9.streamlit.app/)
 
 ## How it works
 
