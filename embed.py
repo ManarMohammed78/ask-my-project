@@ -12,8 +12,14 @@ from chunking import build_chunks
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
-    raise SystemExit("GEMINI_API_KEY not found. Check your .env file.")
-
+    # On Streamlit Community Cloud the key lives in the app's Secrets
+    try:
+        import streamlit as st
+        api_key = st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        api_key = None
+if not api_key:
+    raise SystemExit("GEMINI_API_KEY not found. Check your .env file or Streamlit Secrets.")
 client = genai.Client(api_key=api_key)
 
 EMBED_MODEL = "gemini-embedding-001"
